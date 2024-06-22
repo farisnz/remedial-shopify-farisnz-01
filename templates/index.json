@@ -231,7 +231,7 @@
       "settings": {
         "heading": "<strong>Blog posts<\/strong>",
         "heading_size": "h1",
-        "description": "",
+        "description": "<p>Get Inspired: Highlight Health Benefits<\/p>",
         "blog": "health",
         "post_limit": 4,
         "columns_desktop": 4,
