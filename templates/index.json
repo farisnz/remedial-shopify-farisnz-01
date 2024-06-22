@@ -167,7 +167,7 @@
       "settings": {
         "title": "<strong>Keep it Green!<\/strong>",
         "heading_size": "h1",
-        "description": "",
+        "description": "<p>It includes actions to reduce pollution, conserve biodiversity, manage water resources sustainably.<\/p>",
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 3,
