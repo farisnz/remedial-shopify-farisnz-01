@@ -87,7 +87,6 @@
       "settings": {
         "title": "<strong>Our Categories<\/strong>",
         "heading_size": "h2",
-        "description": "<p>Discover our Latest Categories<\/p>",
         "image_ratio": "square",
         "columns_desktop": 3,
         "color_scheme": "",
@@ -167,7 +166,6 @@
       "settings": {
         "title": "<strong>Keep it Green!<\/strong>",
         "heading_size": "h1",
-        "description": "<p>It includes actions to reduce pollution, conserve biodiversity, manage water resources sustainably.<\/p>",
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 3,
@@ -215,7 +213,6 @@
       "settings": {
         "heading": "<strong>Fuel Your Day, Naturally<\/strong>",
         "heading_size": "h1",
-        "descriptionsubs": "<p>Immunity on the Go<\/p>",
         "enable_video_looping": true,
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "cover_image": "shopify:\/\/shop_images\/video.png",
@@ -231,7 +228,6 @@
       "settings": {
         "heading": "<strong>Blog posts<\/strong>",
         "heading_size": "h1",
-        "description": "<p>Get Inspired: Highlight Health Benefits<\/p>",
         "blog": "health",
         "post_limit": 4,
         "columns_desktop": 4,
