@@ -2,17 +2,41 @@
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+  .video-section{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    .title-wrapper{
+      text-align: center;
+      margin-bottom: 0px;
+      h2{
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 40px;
+        margin-bottom: 8px;
+      }
+    }
+    .collection__description{
+      text-align: center;
+      p{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 32px;
+        color: #121212;
+      }
     }
   }
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
 {%- endstyle -%}
 
 {%- liquid
@@ -50,6 +74,18 @@
           <h2 class="title inline-richtext {{ section.settings.heading_size }}">{{ section.settings.heading }}</h2>
         </div>
       {%- endunless -%}
+      {%- if section.settings.descriptionsubs != blank
+        or section.settings.show_description
+        and section.settings.collection.description != empty
+      -%}
+        <div class="collection__description {{ section.settings.description_style }} rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+          {%- if section.settings.show_description -%}
+            {{ section.settings.collection.description }}
+          {%- else -%}
+            {{ section.settings.descriptionsubs -}}
+          {%- endif %}
+        </div>
+      {%- endif -%}
     </div>
     <deferred-media
       class="video-section__media deferred-media gradient global-media-settings{% if section.settings.full_width %} global-media-settings--full-width{% endif %}{% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -131,7 +167,7 @@
       "type": "inline_richtext",
       "id": "heading",
       "default": "Video",
-      "label": "t:sections.video.settings.heading.label"
+      "label": "berubah"
     },
     {
       "type": "select",
@@ -152,6 +188,11 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "richtext",
+      "id": "descriptionsubs",
+      "label": "t:sections.featured-collection.settings.description.label"
     },
     {
       "type": "checkbox",

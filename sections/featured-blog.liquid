@@ -4,6 +4,45 @@
 {{ 'section-featured-blog.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
+  .blog{
+    .blog-wrapp{
+      /* padding-left: 0px;
+      padding-right: 0px; */
+      padding-top: 32px;
+      padding-bottom: 32px;
+      .title-wrapper-with-link{
+        justify-content: center;
+        margin-bottom: 8px;
+      }
+      .collection__description{
+        text-align: center;
+        p{
+          font-size: 16px;
+          font-weigth: 400;
+          color: #323B4A;
+        }
+      }
+      .card__inner{
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .card__content{
+        .card__information{
+          .card__heading{
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 28px;
+          }
+          .article-card__excerpt{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #323B4A;
+          }
+        }
+      }
+    }
+  }
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -25,7 +64,7 @@
   endif
 -%}
 <div class="blog color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %}">
-  <div class="page-width-desktop isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding">
+  <div class="page-width-desktop blog-wrapp isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding">
     {%- unless section.settings.heading == blank -%}
       <div class="title-wrapper-with-link{% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
         <h2
@@ -37,7 +76,6 @@
         >
           {{ section.settings.heading }}
         </h2>
-
         {%- if section.settings.blog != blank
           and section.settings.show_view_all
           and section.settings.post_limit < section.settings.blog.articles_count
@@ -51,6 +89,18 @@
         {%- endif -%}
       </div>
     {%- endunless -%}
+    {%- if section.settings.description != blank
+      or section.settings.show_description
+      and section.settings.collection.description != empty
+    -%}
+      <div class="collection__description {{ section.settings.description_style }} rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        {%- if section.settings.show_description -%}
+          {{ section.settings.collection.description }}
+        {%- else -%}
+          {{ section.settings.description -}}
+        {%- endif %}
+      </div>
+    {%- endif -%}
 
     <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <ul
@@ -219,6 +269,11 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "t:sections.featured-collection.settings.description.label"
     },
     {
       "type": "blog",

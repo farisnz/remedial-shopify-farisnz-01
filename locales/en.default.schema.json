@@ -2483,6 +2483,7 @@
     },
     "multicolumn": {
       "name": "Multicolumn",
+      "name_custom": "Custom Multicolumn",
       "settings": {
         "title": {
           "label": "Heading"

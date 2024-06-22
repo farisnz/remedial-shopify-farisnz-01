@@ -25,6 +25,53 @@
 {%- endif -%}
 
 {%- style -%}
+  .collection{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    /* padding-left: 0px;
+    padding-right: 0px; */
+    .collection__title{
+      margin-bottom: 32px;
+      .title{
+        text-align: center;
+        font-size: 36px;
+        font-weight: 400;
+        margin-bottom: 8px;
+      }
+      .collection__description{
+        text-align: center;
+        p{
+          font-size: 16px;
+          font-weigth: 400;
+          color: #323B4A;
+        }
+      }
+    }
+    .slider-mobile-gutter{
+      padding: 0px;
+    }
+    .product-grid{
+      .card-wrapper{
+        .card__content{
+          .card__heading{
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            margin-bottom: 16px;
+          }
+          .card-information{
+            .price{
+              .price__regular{
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 28px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -181,6 +228,7 @@
           aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title | escape }}"
         >
           {{ 'sections.featured_collection.view_all' | t }}
+          <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span>
         </a>
       </div>
     {%- endif -%}

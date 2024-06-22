@@ -6,16 +6,23 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Browse our latest products",
+            "heading": "Fresh from Field to Bottle",
             "heading_size": "h0"
+          }
+        },
+        "text_A9tjKM": {
+          "type": "text",
+          "settings": {
+            "text": "Sweet, tart, and oh-so-refreshing, our low-sugar, probiotic lemonades taste like summer in a bottle.",
+            "text_style": "subtitle"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
+            "button_label_1": "Shop Now",
             "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
+            "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -24,10 +31,12 @@
       },
       "block_order": [
         "heading",
+        "text_A9tjKM",
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
+        "image": "shopify:\/\/shop_images\/banner.png",
+        "image_overlay_opacity": 20,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
@@ -39,23 +48,64 @@
         "show_text_below": false
       }
     },
+    "collection_list_F3tMPY": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_ECnM88": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "booster"
+          }
+        },
+        "featured_collection_eDi6Yy": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "kombuchas"
+          }
+        },
+        "featured_collection_xMbVNi": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cold-pressed-juices"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_ECnM88",
+        "featured_collection_eDi6Yy",
+        "featured_collection_xMbVNi"
+      ],
+      "settings": {
+        "title": "<strong>Our Categories<\/strong>",
+        "heading_size": "h2",
+        "description": "<p>Discover our Latest Categories<\/p>",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
+        "title": "<strong>Featured products<\/strong>",
+        "heading_size": "h1",
+        "description": "<p>In our featured product section, we showcase the latest and greatest product in our store.<\/p>",
         "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
+        "description_style": "subtitle",
+        "collection": "cold-pressed-juices",
+        "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
+        "color_scheme": "scheme-2",
+        "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
@@ -66,10 +116,133 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "custom_multicolumn_qNK3MJ": {
+      "type": "custom-multicolumn",
+      "blocks": {
+        "column_Dgjrfi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hijau1.png",
+            "title": "<strong>Environmental Sustainability<\/strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_tw6Ein": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hijau2.png",
+            "title": "<strong>Social Sustainability<\/strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ADPJHV": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<h2>We strive for sustainability in every facet of our business. From our plant-based recipes to our glass bottles, it’s central to who we are.<\/h2>",
+            "link_label": "View All",
+            "link": "shopify:\/\/collections\/environmental-sustainability"
+          }
+        }
+      },
+      "block_order": [
+        "column_Dgjrfi",
+        "column_tw6Ein",
+        "column_ADPJHV"
+      ],
+      "settings": {
+        "title": "<strong>Keep it Green!<\/strong>",
+        "heading_size": "h1",
+        "description": "<p>It includes actions to reduce pollution, conserve biodiversity, manage water resources sustainably.<\/p>",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_tfYaHP": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "<strong>Bundle up and save<\/strong>",
+        "heading_size": "h1",
+        "description": "<p>The best buy product in our store<\/p>",
+        "show_description": false,
+        "description_style": "subtitle",
+        "collection": "bundle-up-and-save",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "video_FweejV": {
+      "type": "video",
+      "settings": {
+        "heading": "<strong>Fuel Your Day, Naturally<\/strong>",
+        "heading_size": "h1",
+        "descriptionsubs": "<p>Immunity on the Go<\/p>",
+        "enable_video_looping": true,
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "cover_image": "shopify:\/\/shop_images\/video.png",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_FRFaJT": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "<strong>Blog posts<\/strong>",
+        "heading_size": "h1",
+        "description": "<p>Get Inspired: Highlight Health Benefits<\/p>",
+        "blog": "health",
+        "post_limit": 4,
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection"
+    "collection_list_F3tMPY",
+    "featured_collection",
+    "custom_multicolumn_qNK3MJ",
+    "featured_collection_tfYaHP",
+    "video_FweejV",
+    "featured_blog_FRFaJT"
   ]
 }
